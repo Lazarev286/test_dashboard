@@ -10,9 +10,6 @@ access_ir_ui_menu,ir.ui.menu,base.model_ir_ui_menu,,1,1,0,0
 access_ir_model_group_user,ir.model,base.model_ir_model,base.group_user,1,0,0,0
 access_ir_model_fields_group_user,ir.model.fields,base.model_ir_model_fields,base.group_user,1,0,0,0
 
-access_ir_model_ks_dashboard_wizard,ks_dashboard_wizard,model_ks_dashboard_wizard,,1,1,1,1
-access_ir_model_ks_duplicate_dashboard_wizard,ks_duplicate_dashboard__wizard,model_ks_dashboard_duplicate_wizard,,1,1,1,1
-access_ir_model_ks_delete_dashboard_wizard,ks_delete_dashboard__wizard,model_ks_dashboard_delete_wizard,,1,1,1,1
 access_lbs_dashboard,lbs.dashboard,model_lbs_dashboard,,1,1,1,1
 access_lbs_dashboard_child,lbs.dashboard_child,model_lbs_dashboard_child,,1,1,1,1
 access_lbs_dashboard_items_multiplier,lbs.dashboard_items_multiplier,model_lbs_dashboard_items_multiplier,,1,1,1,1
@@ -25,3 +22,6 @@ access_lbs_dashboard_template,lbs.dashboard_template,model_lbs_dashboard_templat
 access_lbs_to_do_headers,lbs.to_do_headers,model_lbs_to_do_headers,,1,1,1,1
 access_lbs_to_do_description,lbs.to_do_description,model_lbs_to_do_description,,1,1,1,1
 access_lbs_dashboard_import,lbs.dashboard_import,model_lbs_dashboard_import,,1,1,1,1
+access_lbs_dashboard_wizard,lbs.dashboard_wizard,model_lbs_dashboard_wizard,,1,1,1,1
+access_lbs_dashboard_duplicate_wizard,lbs.dashboard_duplicate_wizard,model_lbs_dashboard_duplicate_wizard,,1,1,1,1
+access_lbs_dashboard_delete_wizard,lbs.dashboard_delete_wizard,model_lbs_dashboard_delete_wizard,,1,1,1,1

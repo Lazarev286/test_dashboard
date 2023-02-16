@@ -277,7 +277,7 @@ odoo.define('ks_dashboard_ninja.ks_dashboard', function(require) {
             var dashboard_id = this.ks_dashboard_id;
             var self= this;
             this._rpc({
-                model: 'ks.dashboard.duplicate.wizard',
+                model: 'lbs.dashboard_duplicate_wizard',
                 method: "DuplicateDashBoard",
                 args: [self.ks_dashboard_id],
                 }).then((result)=>{
@@ -347,7 +347,7 @@ odoo.define('ks_dashboard_ninja.ks_dashboard', function(require) {
            var dashboard_id = this.ks_dashboard_id;
            var self= this;
                 this._rpc({
-                model: 'ks.dashboard.delete.wizard',
+                model: 'lbs.dashboard_delete_wizard',
                 method: "DeleteDashBoard",
                 args: [self.ks_dashboard_id],
             }).then((result)=>{
@@ -367,7 +367,7 @@ odoo.define('ks_dashboard_ninja.ks_dashboard', function(require) {
            var action = {
                 name: _t('Create Dashboard'),
                 type: 'ir.actions.act_window',
-                res_model: 'ks.dashboard.wizard',
+                res_model: 'lbs.dashboard_wizard',
                 domain: [],
                 context: {
                 },

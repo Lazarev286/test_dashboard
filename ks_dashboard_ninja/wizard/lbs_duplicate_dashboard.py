@@ -3,7 +3,7 @@
 from odoo import api, fields, models
 
 
-class KSCreateDashboardWizard(models.TransientModel):
+class LBSCreateDashboardWizard(models.TransientModel):
     _name = 'lbs.dashboard_duplicate_wizard'
     _description = 'Dashboard Duplicate Wizard'
 
@@ -37,7 +37,7 @@ class KSCreateDashboardWizard(models.TransientModel):
         }
 
 
-class KSDeleteDashboardWizard(models.TransientModel):
+class LBSDeleteDashboardWizard(models.TransientModel):
     _name = 'lbs.dashboard_delete_wizard'
     _description = 'Dashboard Delete Wizard'
 
