@@ -161,7 +161,7 @@ class KsDashboardNinjaItems(models.Model):
                                          "('model','not ilike','web_editor.%'),('model','not ilike','web_tour.%'),"
                                          "('model','!=','mail.thread'),('model','not ilike','ks_dash%'),('model','not ilike','ks_to%')]",
                                   help="Data source to fetch and read the data for the creation of dashboard items. ")
-    ks_dashboard_board_template_id = fields.Many2one('ks_dashboard_ninja.board_template', string="Dashboard Template")
+    ks_dashboard_board_template_id = fields.Many2one('lbs.dashboard_template', string="Dashboard Template")
     ks_domain = fields.Char(string="Domain", help="Define conditions for filter. ")
 
     ks_model_id_2 = fields.Many2one('ir.model', string='Kpi Model',
@@ -726,7 +726,7 @@ class KsDashboardNinjaItems(models.Model):
                 ks_line = {}
                 ks_line['ks_to_do_header'] = line.ks_to_do_header
                 ks_line['ks_dn_item_id'] = res.id
-                ks_dn_header_id = self.env['ks_to.do.headers'].create(ks_line)
+                ks_dn_header_id = self.env['lbs.to_do_headers'].create(ks_line)
                 if line.ks_to_do_description_lines:
                     for ks_task in line.ks_to_do_description_lines:
                         ks_task_line = {
@@ -735,7 +735,7 @@ class KsDashboardNinjaItems(models.Model):
                             'ks_active': ks_task.ks_active
                         }
 
-                        self.env['ks_to.do.description'].create(ks_task_line)
+                        self.env['lbs.to_do_description'].create(ks_task_line)
         return res
 
     def name_get(self):

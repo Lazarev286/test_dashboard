@@ -15,7 +15,7 @@ class KSCreateDashboardWizard(models.TransientModel):
                                      default=lambda self: self.env['ir.ui.menu'].search(
                                          [('name', '=', 'My Dashboard')])[0])
     ks_sequence = fields.Integer(string="Sequence")
-    ks_template = fields.Many2one('ks_dashboard_ninja.board_template',
+    ks_template = fields.Many2one('lbs.dashboard_template',
                                   default=lambda self: self.env.ref('ks_dashboard_ninja.ks_blank',
                                                                     False),
                                   string="Dashboard Template")

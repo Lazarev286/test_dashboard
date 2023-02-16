@@ -70,7 +70,7 @@ class KsDashboardNinjaBoard(models.Model):
     ], string='Format')
 
     ks_gridstack_config = fields.Char('Item Configurations')
-    ks_dashboard_default_template = fields.Many2one('ks_dashboard_ninja.board_template',
+    ks_dashboard_default_template = fields.Many2one('lbs.dashboard_template',
                                                     default=lambda self: self.env.ref('ks_dashboard_ninja.ks_blank',
                                                                                       False),
                                                     string="Dashboard Template")
@@ -930,11 +930,11 @@ class KsDashboardNinjaBoard(models.Model):
                 ks_line = {}
                 ks_line['ks_to_do_header'] = line.get('ks_to_do_header')
                 ks_line['ks_dn_item_id'] = ks_item.id
-                ks_dn_header_id = self.env['ks_to.do.headers'].create(ks_line)
+                ks_dn_header_id = self.env['lbs.to_do_headers'].create(ks_line)
                 if line.get(line.get('ks_to_do_header'), False):
                     for ks_task in line.get(line.get('ks_to_do_header')):
                         ks_task['ks_to_do_header_id'] = ks_dn_header_id.id
-                        self.env['ks_to.do.description'].create(ks_task)
+                        self.env['lbs.to_do_description'].create(ks_task)
 
         if ks_action_lines and len(ks_action_lines) != 0:
 

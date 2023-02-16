@@ -3,12 +3,12 @@
 
     <data>
         <!--        Default Templates -->
-        <record id="ks_blank" model="ks_dashboard_ninja.board_template">
+        <record id="ks_blank" model="lbs.dashboard_template">
             <field name="name">Blank</field>
             <field name="ks_item_count">0</field>
         </record>
 
-        <record id="ks_template_1" model="ks_dashboard_ninja.board_template">
+        <record id="ks_template_1" model="lbs.dashboard_template">
             <field name="name">Template 1</field>
             <field name="ks_gridstack_config">[
                 {"item_id":"ks_dashboard_ninja.ks_default_item_1", "data": {"x": 0, "y": 10, "w": 3, "h": 2}},
@@ -60,7 +60,7 @@
             <field name="ks_item_count">7</field>
         </record>
 
-        <record id="ks_template_2" model="ks_dashboard_ninja.board_template">
+        <record id="ks_template_2" model="lbs.dashboard_template">
             <field name="name">Template 2</field>
             <field name="ks_gridstack_config">[
                 {"item_id":"ks_dashboard_ninja.ks_default_item_1", "data": {"x": 0, "y": 0, "w": 2, "h": 2}},
@@ -114,7 +114,7 @@
             <field name="ks_item_count">7</field>
         </record>
 
-        <record id="ks_template_3" model="ks_dashboard_ninja.board_template">
+        <record id="ks_template_3" model="lbs.dashboard_template">
             <field name="name">Template 3</field>
             <field name="ks_gridstack_config">[
                 {"item_id":"ks_dashboard_ninja.ks_default_item_1", "data": {"x": 0, "y": 0, "w": 3, "h": 2}},

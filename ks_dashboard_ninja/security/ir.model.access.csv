@@ -1,11 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_lbs_dashboard_items,lbs.dashboard_items,model_lbs_dashboard_items,,1,1,1,1
-access_ks_to_do_headers,ks_to.do.headers,model_ks_to_do_headers,,1,1,1,1
-access_ks_to_do_description,ks_to.do.description,model_ks_to_do_description,,1,1,1,1
 
 
-access_ks_dashboard_ninja_board_template,ks_dashboard_ninja.board_template,model_ks_dashboard_ninja_board_template,,1,1,1,1
-access_ks_dashboard_ninja_import,ks_dashboard_ninja.import,model_ks_dashboard_ninja_import,base.group_system,1,1,1,0
 access_ir_actions_act_window_view,ir.actions.act_window.view,base.model_ir_actions_act_window_view,,1,0,0,0
 access_ir_actions_act_window,ir.actions.act_window,base.model_ir_actions_act_window,,1,0,0,0
 access_ir_actions_client,ir.actions.client,base.model_ir_actions_client,,1,0,0,0
@@ -25,3 +21,7 @@ access_lbs_dashboard_item_goal,lbs.dashboard_item_goal,model_lbs_dashboard_item_
 access_lbs_dashboard_board_item_action,lbs.dashboard_board_item_action,model_lbs_dashboard_board_item_action,,1,1,1,1
 access_lbs_dashboard_defined_filters,lbs.dashboard_defined_filters,model_lbs_dashboard_defined_filters,,1,1,1,1
 access_lbs_dashboard_custom_filters,lbs.dashboard_custom_filters,model_lbs_dashboard_custom_filters,,1,1,1,1
+access_lbs_dashboard_template,lbs.dashboard_template,model_lbs_dashboard_template,,1,1,1,1
+access_lbs_to_do_headers,lbs.to_do_headers,model_lbs_to_do_headers,,1,1,1,1
+access_lbs_to_do_description,lbs.to_do_description,model_lbs_to_do_description,,1,1,1,1
+access_lbs_dashboard_import,lbs.dashboard_import,model_lbs_dashboard_import,,1,1,1,1

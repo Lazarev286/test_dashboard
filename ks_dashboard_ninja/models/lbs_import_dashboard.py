@@ -7,7 +7,7 @@ _logger = logging.getLogger(__name__)
 
 
 class LBSDashboardImport(models.TransientModel):
-    _name = 'ks_dashboard_ninja.import'
+    _name = 'lbs.dashboard_import'
     _description = 'Import Dashboard'
 
     ks_import_dashboard = fields.Binary(string="Upload Dashboard", attachment=True)

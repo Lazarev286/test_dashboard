@@ -3,7 +3,7 @@ from odoo import models, fields, api, _
 
 class LBSDashboardTemplate(models.Model):
     _name = 'lbs.dashboard_template'
-    _description = 'Dashboard Ninja Template'
+    _description = 'Dashboard Template'
 
     name = fields.Char()
     ks_gridstack_config = fields.Char()
@@ -26,7 +26,7 @@ class LBSDashboardTemplate(models.Model):
                 val['ks_item_count'] = len(dashboard_id.ks_dashboard_items_ids)
                 val['ks_dashboard_item_ids'] = [(4, x.copy({'ks_dashboard_ninja_board_id': False}).id) for x in
                                                 dashboard_id.ks_dashboard_items_ids]
-        recs = super(KsDashboardNinjaTemplate, self).create(vals_list)
+        recs = super(LBSDashboardTemplate, self).create(vals_list)
         return recs
 
     def write(self, val):
@@ -37,5 +37,5 @@ class LBSDashboardTemplate(models.Model):
             val['ks_dashboard_item_ids'] = [(6, 0,
                                              [x.copy({'ks_dashboard_ninja_board_id': False}).id for x in
                                               dashboard_id.ks_dashboard_items_ids])]
-        recs = super(KsDashboardNinjaTemplate, self).write(val)
+        recs = super(LBSDashboardTemplate, self).write(val)
         return recs

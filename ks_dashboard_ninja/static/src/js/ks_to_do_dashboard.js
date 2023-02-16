@@ -139,7 +139,7 @@ return KsDashboard.include({
         onSaveTask: function(content, ks_description_id, ks_item_id, ks_section_id){
             var self = this;
             this._rpc({
-                    model: 'ks_to.do.description',
+                    model: 'lbs.to_do_description',
                     method: 'write',
                     args: [ks_description_id, {
                         "ks_description": content
@@ -167,7 +167,7 @@ return KsDashboard.include({
                 confirm_callback: function() {
 
                     self._rpc({
-                    model: 'ks_to.do.description',
+                    model: 'lbs.to_do_description',
                     method: 'unlink',
                     args: [parseInt(ks_description_id)],
                 }).then(function() {
@@ -222,7 +222,7 @@ return KsDashboard.include({
         _onCreateTask: function(content, ks_section_id, ks_item_id){
             var self = this;
             this._rpc({
-                    model: 'ks_to.do.description',
+                    model: 'lbs.to_do_description',
                     method: 'create',
                     args: [{
                         ks_to_do_header_id: ks_section_id,
@@ -263,7 +263,7 @@ return KsDashboard.include({
             }
             self.content_id = content_id;
             this._rpc({
-                    model: 'ks_to.do.description',
+                    model: 'lbs.to_do_description',
                     method: 'write',
                     args: [content_id, {
                         "ks_active": ks_value

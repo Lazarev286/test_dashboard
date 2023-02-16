@@ -111,7 +111,7 @@ class LBSDashboardItems(models.Model):
 
 class LBSToDoheaders(models.Model):
     _name = 'lbs.to_do_headers'
-    _description = "to do headers"
+    _description = "To do headers"
 
     ks_dn_item_id = fields.Many2one('lbs.dashboard_items')
     ks_to_do_header = fields.Char('Header')
@@ -135,7 +135,7 @@ class LBSToDoheaders(models.Model):
 
 class KsToDODescription(models.Model):
     _name = 'lbs.to_do_description'
-    _description = 'to do description'
+    _description = 'To do description'
 
     ks_to_do_header_id = fields.Many2one('lbs.to_do_headers')
     ks_description = fields.Text('Description')
