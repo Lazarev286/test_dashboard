@@ -3,9 +3,9 @@ from odoo.exceptions import ValidationError
 from odoo.tools.safe_eval import safe_eval
 
 
-class KsDashboardNinjaTemplate(models.Model):
+class LBSDashboardTemplate(models.Model):
     _name = 'lbs.dashboard_defined_filters'
-    _description = 'Dashboard Ninja Defined Filters'
+    _description = 'Dashboard Defined Filters'
 
     name = fields.Char("Filter Label")
     ks_dashboard_board_id = fields.Many2one('lbs.dashboard', string="Dashboard")
@@ -46,9 +46,9 @@ class KsDashboardNinjaTemplate(models.Model):
 
 
 
-class KsDashboardNinjaTemplate(models.Model):
+class LBSDashboardCustomTemplate(models.Model):
     _name = 'lbs.dashboard_custom_filters'
-    _description = 'Dashboard Ninja Custom Filters'
+    _description = 'Dashboard Custom Filters'
 
     name = fields.Char("Filter Label")
     ks_dashboard_board_id = fields.Many2one('lbs.dashboard', string="Dashboard")

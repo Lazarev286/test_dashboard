@@ -88,10 +88,10 @@ class KsDashboardNinjaBoard(models.Model):
                                                 help="Smallest sequence give high priority and Highest sequence give "
                                                      "low priority")
     ks_child_dashboard_ids = fields.One2many('lbs.dashboard_child', 'ks_dashboard_ninja_id')
-    ks_dashboard_defined_filters_ids = fields.One2many('ks_dashboard_ninja.board_defined_filters',
+    ks_dashboard_defined_filters_ids = fields.One2many('lbs.dashboard_defined_filters',
                                                        'ks_dashboard_board_id',
                                                        string='Dashboard Predefined Filters')
-    ks_dashboard_custom_filters_ids = fields.One2many('ks_dashboard_ninja.board_custom_filters',
+    ks_dashboard_custom_filters_ids = fields.One2many('lbs.dashboard_custom_filters',
                                                       'ks_dashboard_board_id',
                                                       string='Dashboard Custom Filters')
     multi_layouts = fields.Boolean(string='Enable Multi-Dashboard Layouts',
@@ -1138,13 +1138,13 @@ class KsDashboardNinjaBoard(models.Model):
         return result
 
     def ks_prepare_dashboard_domain(self):
-        pre_defined_filter_ids = self.env['ks_dashboard_ninja.board_defined_filters'].search(
+        pre_defined_filter_ids = self.env['lbs.dashboard_defined_filters'].search(
             [['id', 'in', self.ks_dashboard_defined_filters_ids.ids], '|', ['ks_is_active', '=', True],
              ['display_type', '=', 'line_section']], order='sequence')
         data = {}
         filter_model_ids = pre_defined_filter_ids.mapped('ks_model_id').ids
         for model_id in filter_model_ids:
-            filter_ids = self.env['ks_dashboard_ninja.board_defined_filters'].search(
+            filter_ids = self.env['lbs.dashboard_defined_filters'].search(
                 [['id', 'in', pre_defined_filter_ids.ids], '|', ['ks_model_id', '=', model_id],
                  ['display_type', '=', 'line_section']],
                 order='sequence')
@@ -1176,7 +1176,7 @@ class KsDashboardNinjaBoard(models.Model):
 
     def ks_prepare_dashboard_pre_domain(self):
         data = {}
-        pre_defined_filter_ids = self.env['ks_dashboard_ninja.board_defined_filters'].search(
+        pre_defined_filter_ids = self.env['lbs.dashboard_defined_filters'].search(
             [['id', 'in', self.ks_dashboard_defined_filters_ids.ids]], order='sequence')
         categ_seq = 1
         for rec in pre_defined_filter_ids:
@@ -1202,7 +1202,7 @@ class KsDashboardNinjaBoard(models.Model):
         return data
 
     def ks_prepare_dashboard_custom_domain(self):
-        custom_filter_ids = self.env['ks_dashboard_ninja.board_custom_filters'].search(
+        custom_filter_ids = self.env['lbs.dashboard_custom_filters'].search(
             [['id', 'in', self.ks_dashboard_custom_filters_ids.ids]], order='name')
         data = {}
         for rec in custom_filter_ids:

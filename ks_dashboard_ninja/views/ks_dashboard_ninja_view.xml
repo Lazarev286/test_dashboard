@@ -131,7 +131,7 @@
 
         <record model="ir.ui.view" id="ks_dashboard_ninja.board_defined_filters">
             <field name="name">Dashboard Defined Filter Form View</field>
-            <field name="model">ks_dashboard_ninja.board_defined_filters</field>
+            <field name="model">lbs.dashboard_defined_filters</field>
             <field name="arch" type="xml">
                 <form string="Dashboard Defined Filter">
                     <sheet>

@@ -624,7 +624,7 @@
                 'type': 'ir.actions.act_window',
                 'context': {'default_ks_dashboard_item_ids': records.ids, 'default_ks_action':'duplicate'},
                 'view_mode': 'form',
-                'res_model': 'ks_ninja_dashboard.item_action',
+                'res_model': 'lbs.dashboard_board_item_action',
                 'target':'new'
                 }
             </field>
@@ -642,7 +642,7 @@
                 'name' : 'Dashboard Item Action',
                 'context': {'default_ks_dashboard_item_ids': records.ids, 'default_ks_action':'move'},
                 'view_mode': 'form',
-                'res_model': 'ks_ninja_dashboard.item_action',
+                'res_model': 'lbs.dashboard_board_item_action',
                 'target':'new'
                 }
             </field>

@@ -2,8 +2,8 @@
     <data>
 
         <record model="ir.ui.view" id="ks_dashboard_ninja_action">
-            <field name="name">ks_dashboard_ninja_item action</field>
-            <field name="model">ks_ninja_dashboard.item_action</field>
+            <field name="name">lbs_dashboard_board_item action</field>
+            <field name="model">lbs.dashboard_board_item_action</field>
             <field name="arch" type="xml">
                 <form string="Dashboard Item Action">
                     <group>
